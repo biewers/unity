@@ -32,37 +32,35 @@ public class PlayerMovement : MonoBehaviour {
         }
 
         //---------------------Power Ups---------------------//
-        ChangeText textClass = FindObjectOfType<ChangeText>();
 
         //Jump Power Up
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if(textClass.remainingPU > 0 && textClass.tag == "JumpPU")
+            if(properties.jumpActivated)
             {
-                Jump(textClass);
+                Jump();
             }
         }
 
         //Tele Power Up
         if (Input.GetKeyDown("q"))
         {
-            if (textClass.remainingPU > 0 && textClass.tag == "TelePU")
+            if (properties.teleActivated)
             {
-                StartCoroutine(Teleport(textClass));
+                StartCoroutine(Teleport());
             }
         }
     }
 
-    private void Jump(ChangeText ct)
+    private void Jump()
     {
                            //Jump Power
         rb.AddForce(0, properties.jumpForce, 0, ForceMode.VelocityChange);
-        ct.remainingPU--;
 
         FindObjectOfType<ColorChange>().BordersEnabled(false);
     }
 
-    IEnumerator Teleport(ChangeText ct)
+    IEnumerator Teleport()
     {
         this.GetComponent<BoxCollider>().enabled = false;
         rb.useGravity = false;
@@ -74,8 +72,6 @@ public class PlayerMovement : MonoBehaviour {
         this.GetComponent<BoxCollider>().enabled = true;
         rb.useGravity = true;
         material.color = new Color(material.color.r, material.color.g, material.color.b, 1.0f);
-
-        ct.remainingPU--;
 
         ColorChange cc = FindObjectOfType<ColorChange>();
         cc.ChangeColor(properties.telePUColor);

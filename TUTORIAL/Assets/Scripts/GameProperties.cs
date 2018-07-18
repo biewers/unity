@@ -11,4 +11,7 @@ public class GameProperties : MonoBehaviour {
     public Color jumpPUColor;
     public Color telePUColor;
 
+    public bool jumpActivated = false;
+    public bool teleActivated = false;
+
 }
