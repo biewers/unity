@@ -267,7 +267,7 @@ Rigidbody2D:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1159476192}
   m_BodyType: 0
-  m_Simulated: 0
+  m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
@@ -2109,7 +2109,7 @@ Prefab:
     - target: {fileID: 114530287256018366, guid: 7f9e1cd272de3e0478bb186461a27fe3,
         type: 2}
       propertyPath: jumpAbility
-      value: 250
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 50568856010391210, guid: 7f9e1cd272de3e0478bb186461a27fe3,
         type: 2}

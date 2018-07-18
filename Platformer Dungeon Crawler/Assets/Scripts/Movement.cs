@@ -8,22 +8,31 @@ public class Movement : MonoBehaviour {
     public float movementSpeed;
     public float jumpAbility;
     
-	void Start () {
-	    	
-	}
+    private bool isGrounded;
 	
 	void FixedUpdate () {
-		if(Input.GetKey("d"))
+        if (isGrounded && Input.GetAxis("Vertical") != 0)
+            rb.velocity = new Vector2(0, jumpAbility * Time.deltaTime);
+
+        transform.Translate(
+            Input.GetAxis("Horizontal") * Time.deltaTime * movementSpeed, 0.0f,
+            0.0f
+        );
+    }
+    
+    void OnCollisionEnter2D(Collision2D theCollision)
+    {
+        if (theCollision.gameObject.name == "Ground")
         {
-            rb.velocity = new Vector2(movementSpeed, rb.velocity.y);
+            isGrounded = true;
         }
-        if (Input.GetKey("a"))
+    }
+    
+    void OnCollisionExit2D(Collision2D theCollision)
+    {
+        if (theCollision.gameObject.name == "Ground")
         {
-            rb.velocity = new Vector2(-movementSpeed, rb.velocity.y);
-        }
-        if ((Input.GetKey("w") || Input.GetKey(KeyCode.Space)) && rb.velocity.y == 0)
-        {
-            rb.AddForce(new Vector2(0, jumpAbility));
+            isGrounded = false;
         }
     }
 }
