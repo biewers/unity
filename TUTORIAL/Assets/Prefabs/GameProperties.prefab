@@ -51,9 +51,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c408152250c4bc241853b36da0c50cb2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpForce: 7
+  jumpForce: 15
   teleportDuration: 1
   forwardForce: 100
   strafeForce: 1
   jumpPUColor: {r: 1, g: 0.93725497, b: 0.1254902, a: 1}
   telePUColor: {r: 0.9725491, g: 0.21568629, b: 0.8588236, a: 1}
+  jumpActivated: 0
+  teleActivated: 0
+  playerHealth: 100
+  MAX_PLAYER_HEALTH: 100
+  playerHealthRegenPerFrame: 10
+  playerHealthRegenDelay: 1

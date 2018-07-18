@@ -14,4 +14,9 @@ public class GameProperties : MonoBehaviour {
     public bool jumpActivated = false;
     public bool teleActivated = false;
 
+    public float playerHealth = 100.0f;
+    public float MAX_PLAYER_HEALTH = 100.0f;
+    public float playerHealthRegenPerFrame = 0.5f;
+    public float playerHealthRegenDelay = 1.0f;
+
 }

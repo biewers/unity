@@ -4,12 +4,12 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour {
 
     public Rigidbody rb;
-    public GameProperties properties;
-
     public Material material;
+    public GameProperties properties;
 
     private void Start()
     {
+        properties = FindObjectOfType<GameProperties>();
         rb = this.GetComponent<Rigidbody>();
     }
 

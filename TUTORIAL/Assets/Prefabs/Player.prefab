@@ -168,7 +168,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 32
   m_CollisionDetection: 1
 --- !u!65 &65898514075071504
 BoxCollider:
@@ -201,8 +201,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54995196453996328}
-  properties: {fileID: 0}
   material: {fileID: 2100000, guid: b80f246b32505744f9b80e9881002c65, type: 2}
+  properties: {fileID: 0}
 --- !u!114 &114197011196405448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -214,6 +214,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acaf3b4e465bbc945adc17016650ed88, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  collisionDamage: 20
 --- !u!114 &114259476004075514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -226,5 +227,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rb: {fileID: 54995196453996328}
-  movement: {fileID: 114193105635508828}
   pausedUI: {fileID: 0}

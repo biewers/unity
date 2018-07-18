@@ -3,28 +3,34 @@ using UnityEngine.UI;
 
 public class PlayerControls : MonoBehaviour {
 
+    GameProperties properties;
+
     public Rigidbody rb;
-    public PlayerMovement movement;
     public Text pausedUI;
 
     bool paused = false;
     float ff, sf;
     Vector3 veloc;
 
-	void Update () {
+    private void Start()
+    {
+        properties = FindObjectOfType<GameProperties>();
+    }
+
+    void Update () {
 	    if(Input.GetKeyDown("p"))
         {
             if (!paused)
             {
                 paused = true;
-                pausedUI.enabled = true;
+                pausedUI.enabled = true;    
 
-                ff = movement.properties.forwardForce;
-                sf = movement.properties.strafeForce;
+                ff = properties.forwardForce;
+                sf = properties.strafeForce;
                 veloc = rb.velocity;
 
-                movement.properties.forwardForce = 0;
-                movement.properties.strafeForce = 0;
+                properties.forwardForce = 0;
+                properties.strafeForce = 0;
                 rb.velocity = new Vector3(0, 0, 0);
             }
             else
@@ -32,8 +38,8 @@ public class PlayerControls : MonoBehaviour {
                 paused = false;
                 pausedUI.enabled = false;
 
-                movement.properties.forwardForce = ff;
-                movement.properties.strafeForce = sf;
+                properties.forwardForce = ff;
+                properties.strafeForce = sf;
                 rb.velocity = veloc;
             }
         }

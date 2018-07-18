@@ -4,7 +4,13 @@ using UnityEngine;
 
 public class PowerUp : MonoBehaviour {
 
+    GameProperties properties;
     public ParticleSystem ps;
+
+    private void Start()
+    {
+        properties = FindObjectOfType<GameProperties>();
+    }
 
     private void OnTriggerEnter(Collider other)
     {
@@ -15,13 +21,13 @@ public class PowerUp : MonoBehaviour {
         
         if (this.tag == "TelePU")
         {
-            cc.ChangeColor(FindObjectOfType<GameProperties>().telePUColor);
-            FindObjectOfType<GameProperties>().teleActivated = true;
+            cc.ChangeColor(properties.telePUColor);
+            properties.teleActivated = true;
         }
         else if (this.tag == "JumpPU")
         {
-            cc.ChangeColor(FindObjectOfType<GameProperties>().jumpPUColor);
-            FindObjectOfType<GameProperties>().jumpActivated = true;
+            cc.ChangeColor(properties.jumpPUColor);
+            properties.jumpActivated = true;
         }
             
 
