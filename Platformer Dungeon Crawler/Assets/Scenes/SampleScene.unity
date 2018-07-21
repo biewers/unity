@@ -270,7 +270,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 0.048203688
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -415,7 +415,7 @@ GameObject:
   - component: {fileID: 1308148566}
   - component: {fileID: 1308148568}
   m_Layer: 0
-  m_Name: Tilemap
+  m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2024,34 +2024,17 @@ EdgeCollider2D:
   m_GameObject: {fileID: 1308148564}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 20639f8f72fe2114b8e8a42b34c8b607, type: 2}
+  m_Material: {fileID: 6200000, guid: 9316ac16f7237304db5c5f4c5473ab11, type: 2}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_EdgeRadius: 0
   m_Points:
-  - {x: 24.267218, y: 5.328473}
-  - {x: -4.1415253, y: 5.300922}
-  - {x: -4.1671185, y: -0.02529649}
-  - {x: -2.755575, y: -0.03244661}
-  - {x: -2.8721213, y: 0.94509333}
-  - {x: -1.157041, y: 0.9385336}
-  - {x: -1.1889062, y: -0.044136718}
-  - {x: -0.16896963, y: -0.049383827}
-  - {x: -0.18180132, y: -2.0373788}
-  - {x: 0.8452126, y: -2.0328732}
-  - {x: 0.81413424, y: -3.0523129}
-  - {x: 13.249977, y: -3.0350904}
-  - {x: 13.13964, y: -2.0261357}
-  - {x: 15.196524, y: -2.042006}
-  - {x: 15.128212, y: -1.0570408}
-  - {x: 16.823599, y: -1.0590718}
-  - {x: 16.835632, y: -2.0567138}
-  - {x: 17.841986, y: -2.0445247}
-  - {x: 17.817461, y: -3.0522492}
-  - {x: 24.224632, y: -3.0693855}
-  - {x: 24.261093, y: 5.3265457}
+  - {x: -11, y: -1}
+  - {x: 2.06012, y: -3.0161066}
+  - {x: 27.875378, y: -3.0272431}
+  - {x: 60, y: -1}
 --- !u!1001 &1635700607
 Prefab:
   m_ObjectHideFlags: 0
@@ -2065,7 +2048,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4158773059490784, guid: 7f9e1cd272de3e0478bb186461a27fe3, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -0.421
+      value: -0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4158773059490784, guid: 7f9e1cd272de3e0478bb186461a27fe3, type: 2}
       propertyPath: m_LocalPosition.z
@@ -2109,7 +2092,7 @@ Prefab:
     - target: {fileID: 114530287256018366, guid: 7f9e1cd272de3e0478bb186461a27fe3,
         type: 2}
       propertyPath: jumpAbility
-      value: 5
+      value: 17.25
       objectReference: {fileID: 0}
     - target: {fileID: 50568856010391210, guid: 7f9e1cd272de3e0478bb186461a27fe3,
         type: 2}
@@ -2124,6 +2107,11 @@ Prefab:
     - target: {fileID: 1824402853830094, guid: 7f9e1cd272de3e0478bb186461a27fe3, type: 2}
       propertyPath: m_TagString
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 50568856010391210, guid: 7f9e1cd272de3e0478bb186461a27fe3,
+        type: 2}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7f9e1cd272de3e0478bb186461a27fe3, type: 2}

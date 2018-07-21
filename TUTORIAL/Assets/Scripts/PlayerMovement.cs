@@ -16,17 +16,9 @@ public class PlayerMovement : MonoBehaviour {
     void FixedUpdate ()
     {
         rb.AddForce(new Vector3(0, 0, properties.forwardForce));
+        rb.AddForce(new Vector3(Input.GetAxis("Horizontal") * properties.strafeForce, 0, 0), ForceMode.VelocityChange);
 
-        if(Input.GetKey("a"))
-        {
-            rb.AddForce(new Vector3(-properties.strafeForce, 0, 0), ForceMode.VelocityChange);
-        }
-        if(Input.GetKey("d"))
-        {
-            rb.AddForce(new Vector3(properties.strafeForce, 0, 0), ForceMode.VelocityChange);
-        }
-
-        if(GetComponent<Transform>().position.y < -3)
+        if (GetComponent<Transform>().position.y < -3)
         {
             FindObjectOfType<GameManager>().Death();
         }
