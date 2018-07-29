@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 0740affe76bbb4449b0ff44857f633f7
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - player: {fileID: 1369511524175470, guid: c8a2c4e42f5d0a742ae5afb6372c2c6d, type: 2}
+  - enemyPrefab: {fileID: 1638902689055906, guid: c5d1526a09f22e54687bef14e186870f,
+      type: 2}
+  - waveNumberText: {fileID: 114351895311707678, guid: 88b729a8882c64c4cb4dc82c2912937d,
+      type: 2}
+  - waveCountdownText: {fileID: 114696812874775632, guid: 88b729a8882c64c4cb4dc82c2912937d,
+      type: 2}
+  - spawner: {fileID: 1757291401650296, guid: 3be6ba8a38875f24286568433243d88d, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
